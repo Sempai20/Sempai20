@@ -1,0 +1,121 @@
+.container {
+    background-color: #f38375;
+}
+main {
+    position: relative;
+}
+main .dates {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding: 10px;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid black;
+}
+main .dates li {
+    list-style-type: none;
+}
+main .dates a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 500ms;
+}
+main .dates a:hover {
+    color: color-mix(in srgb, white, black 20%);
+}
+
+
+
+
+section {
+    padding: 40px;
+}
+
+
+main .events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+main .events .card:nth-child(1) {
+    background-color: #cdb4db;
+}
+main .events .card:nth-child(2) {
+    background-color: #ffc8dd;
+}
+main .events .card:nth-child(3) {
+    background-color: #ffafcc;
+}
+main .events .card:nth-child(4) {
+    background-color: #bde0fe;
+}
+main .events .card:nth-child(5) {
+    background-color: #a2d2ff;
+}
+section .card {
+    width: 250px;
+    height: 450px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+section .card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+
+
+section .event-info {
+    padding: 0px 10px;
+}
+section .event-info p {
+    font-weight: bold;
+}
+section .title {
+    font-size: 1.4rem;
+}
+section .time {
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+}
+section .event-info a {
+    text-decoration: none;
+    color: #212529;
+    background-color: transparent;
+    border: 1px solid #212529;
+    border-radius: 5px;
+    padding: 3px 5px;
+    transition: all 500ms;
+}
+section .event-info a:hover {
+    background-color: color-mix(in srgb, white, transparent 50%);
+}
+
+@media (max-width: 992px) {
+    main .dates {
+        gap: 10px;
+    }
+    main .dates a {
+        font-size: 0.6rem;
+    }
+
+
+    section {
+        padding: 20px;
+    }
+    section .card {
+        width: 200px;
+        height: 350px;
+    }
+    section .card img {
+        height: 240px;
+    }
+}
