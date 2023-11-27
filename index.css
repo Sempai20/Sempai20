@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* navigation bar */
+header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('BackgroundImages/TheatreBG.jpg');
+    background-position: center;
+    background-size: cover;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    backdrop-filter: blur(5px);
+}
+
+/* brand logo */
+.brand-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.brand-logo img {
+    width: 70px;
+}
+.brand-name p {
+    color: white;
+    font-weight: bold;
+    cursor: default;
+}
+
+/* navigation bar buttons */
+.navbar-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+header li {
+    list-style-type: none;
+}
+header a {
+    text-decoration: none;
+    color: white;
+    transition: all 500ms;
+}
+header a:hover {
+    color: color-mix(in srgb, white, black 20%);
+}
+
+/* search bar and login button in navbar*/
+header .search-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+header .search {
+    position: relative;
+}
+header .search input {
+    background: none;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+header .search input::placeholder {
+    color: white;
+}
+header .search input:not(:placeholder-shown) ~ i {
+    display: none;
+}
+header .search i {
+    color: white;
+    position: absolute;
+    top: 20%;
+    right: 5px;
+}
+header .search-login button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    color: white;
+    background: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 500ms;
+}
+header .search-login button:hover {
+    color: color-mix(in srgb, white, black 20%);
+    border-color: color-mix(in srgb, white, black 20%);
+}
+
+/* navigation bar dropdown menu button */
+.navbar-btn {
+    color: white;
+    display: none;
+}
+.navbar-dropdown {
+    width: 100%;
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    transition: all 500ms;
+    overflow: hidden;
+    position: absolute;
+    height: 0;
+    display: none;
+}
+.navbar-dropdown li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.navbar-dropdown .search {
+    width: 100%;
+}
+.navbar-dropdown .search input {
+    width: 100%;
+}
+.open {
+    height: 165px;
+}
+
+/* dashboard */
+.dashboard {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.dashboard .brand-name {
+    color: white;
+    font-size: 3rem;
+}
+.dashboard .side-text-container {
+    width: 500px;
+    overflow: hidden;
+}
+.dashboard .side-text {
+    color: white;
+    font-size: 0.9rem;
+    animation: moving infinite 15s;
+}
+@keyframes moving {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(150%);
+    }
+}
+
+/* media queries to make the website responsive for large to small devices */
+@media (max-width: 992px) {
+    .navbar-btns {
+        display: none;
+    }
+    .navbar-btn, .navbar-dropdown {
+        display: block;
+    }
+    .dashboard {
+        width: 100%;
+    }
+    .dashboard .brand-name {
+        font-size: 1.8rem;
+    }
+    .dashboard .side-text-container {
+        width: 100%;
+    }
+}
