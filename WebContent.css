@@ -1,0 +1,32 @@
+main {
+    background-color: #f02d3a;
+    position: relative;
+}
+
+.events-of-the-week {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: scroll;
+}
+.events-of-the-week li {
+    list-style-type: none;
+    padding: 10px;
+}
+.events-of-the-week a {
+    text-decoration: none;
+    color: white;
+    transition: all 500ms;
+}
+.events-of-the-week a:hover {
+    color: color-mix(in srgb, white, black 20%);
+}
+
+@media (max-width: 992px) {
+    .events-of-the-week a {
+        font-size: 0.6rem;
+    }
+}
